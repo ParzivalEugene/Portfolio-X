@@ -18,12 +18,12 @@ const RunningLine = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-center items-center py-2 px-3 bg-white text-black font-medium rounded-md text-2xl leading-9 ml-8"
+            className="ml-8 flex items-center justify-center rounded-md bg-white px-3 py-2 text-2xl font-medium leading-9 text-black"
           >
             <h2>{item}</h2>
           </div>
         ))}
-        <div className="flex justify-center items-center py-2 px-3 font-medium text-2xl leading-9 ml-8">
+        <div className="ml-8 flex items-center justify-center px-3 py-2 text-2xl font-medium leading-9">
           <h2>Open to job offers</h2>
         </div>
       </Marquee>
