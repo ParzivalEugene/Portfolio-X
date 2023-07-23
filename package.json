@@ -11,6 +11,8 @@
   "dependencies": {
     "@react-three/drei": "^9.74.7",
     "@react-three/fiber": "^8.13.0",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.395",
     "@studio-freight/react-lenis": "^0.0.21",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/node": "20.2.5",
@@ -25,6 +27,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-fast-marquee": "^1.6.0",
+    "react-icons": "^4.10.1",
     "three": "^0.153.0",
     "three-stdlib": "^2.23.9",
     "typescript": "5.1.3"
