@@ -1,10 +1,8 @@
 "use client";
-import { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const grotesk = Space_Grotesk({ subsets: ["latin"] });
-
 
 export default function RootLayout({
   children,
@@ -17,10 +15,9 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <title>Michkoff | Portfolio</title>
       </head>
-      <body className={grotesk.className}>
-        {children}
-      </body>
+      <body className={grotesk.className}>{children}</body>
     </html>
   );
 }
