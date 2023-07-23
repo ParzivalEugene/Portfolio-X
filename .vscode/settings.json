@@ -1,0 +1,9 @@
+{
+  "discord.lowerDetailsEditing": "Portfolio X",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true,
+    "prettier": true
+  },
+  "editor.tabSize": 2
+}
