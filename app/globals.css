@@ -2,11 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html,
 body,
 :root {
   height: 100%;
-  background-color: black;
   color-scheme: dark;
+  @apply bg-background text-text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .main-container {
+    display: grid;
+    grid-template-columns: 16rem 1200px 16rem;
+  }
+
+  .hero-section-cut {
+    --border-width: 1px;
+    --edge-size: 2rem;
+
+    position: relative;
+    border: 0;
+    isolation: isolate;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - var(--edge-size)),
+      calc(100% - var(--edge-size)) 100%,
+      0 100%
+    );
+    background-color: theme("colors.background");
+  }
+
+  .hero-section-cut::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.primary.500");
+    z-index: -2;
+  }
+
+  .hero-section-cut::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.background");
+    z-index: -1;
+    clip-path: polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width))
+        calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
+      calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+        calc(100% - var(--border-width)),
+      calc(var(--border-width)) calc(100% - var(--border-width))
+    );
+  }
 }

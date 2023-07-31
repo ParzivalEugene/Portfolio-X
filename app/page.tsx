@@ -1,17 +1,17 @@
-import Navbar from "@/components/Navbar";
-import RunningLine from "@/components/RunningLine";
-import HeroSection from "@/sections/HeroSection";
-import Journey from "@/sections/Journey";
+import { Navbar, RunningLine } from "@/components";
+import { HeroLeftSection, HeroMainSection } from "@/sections";
+import { HeroRightSection } from "@/sections/HeroRight.section";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-5 px-5 py-5">
-      <div className="flex min-h-screen flex-col gap-5">
-        <Navbar />
-        <RunningLine />
-        <HeroSection />
+    <>
+      <Navbar />
+      <RunningLine />
+      <div className="main-container mx-auto mt-4 w-fit">
+        <HeroLeftSection />
+        <HeroMainSection />
+        <HeroRightSection />
       </div>
-      <Journey />
-    </main>
+    </>
   );
 }

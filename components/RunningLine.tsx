@@ -5,25 +5,28 @@ import Marquee from "react-fast-marquee";
 const data = [
   "Developer",
   "Digital Creator",
-  "Designer",
+  "Cyclist",
   "Pythonista",
   "Let him cook!",
   "Database Engineer",
+  "Pianist",
+  "Rust enjoyer",
+  "Cyberpsycho"
 ];
 
-const RunningLine = () => {
+export const RunningLine = () => {
   return (
-    <section className="w-screen self-center">
+    <section className="border-y border-red-500 border-primary-500 py-3 uppercase text-base">
       <Marquee autoFill speed={90}>
         {data.map((item, index) => (
           <div
             key={index}
-            className="ml-8 flex items-center justify-center rounded-md bg-white px-3 py-2 text-2xl font-medium leading-9 text-black"
+            className="border border-secondary-500 py-3 px-6 mx-4"
           >
-            <h2>{item}</h2>
+            <p>{item}</p>
           </div>
         ))}
-        <div className="ml-8 flex items-center justify-center px-3 py-2 text-2xl font-medium leading-9">
+        <div className="border border-accent-500 py-3 px-6 mx-4 text-accent-500">
           <h2>Open to job offers</h2>
         </div>
       </Marquee>
@@ -31,4 +34,3 @@ const RunningLine = () => {
   );
 };
 
-export default RunningLine;

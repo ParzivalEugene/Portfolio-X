@@ -1,5 +1,4 @@
 "use client";
-import Navbar from "@/components/Navbar";
 import { Lenis } from "@studio-freight/react-lenis";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
@@ -21,14 +20,12 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" sizes="256x256" href="/m_logo.svg" />
+        <link rel="favicon" sizes="any" href="favicon.ico" />
         <title>{metadata.title}</title>
       </head>
       <body className={grotesk.className}>
         <Lenis root>
-          <div className="mx-auto my-5 max-w-[1400px]">
-            {children}
-          </div>
+          <main>{children}</main>
         </Lenis>
       </body>
     </html>

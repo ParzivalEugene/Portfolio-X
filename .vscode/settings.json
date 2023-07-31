@@ -1,9 +1,12 @@
 {
-  "discord.lowerDetailsEditing": "Portfolio X",
+  "discord.lowerDetailsEditing": "Michkoff | Portfolio X",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
     "prettier": true
   },
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
 }
