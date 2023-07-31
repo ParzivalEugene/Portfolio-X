@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={grotesk.className}>
         <Lenis root>
-          <main>{children}</main>
+          {children}
         </Lenis>
       </body>
     </html>

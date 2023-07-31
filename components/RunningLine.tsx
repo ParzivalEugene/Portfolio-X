@@ -3,6 +3,7 @@
 import Marquee from "react-fast-marquee";
 
 const data = [
+  "MICHKOFF.COM",
   "Developer",
   "Digital Creator",
   "Cyclist",
@@ -11,26 +12,25 @@ const data = [
   "Database Engineer",
   "Pianist",
   "Rust enjoyer",
-  "Cyberpsycho"
+  "Cyberpsycho",
 ];
 
 export const RunningLine = () => {
   return (
-    <section className="border-y border-red-500 border-primary-500 py-3 uppercase text-base">
+    <section className="border-red-500 running-line-shade top-0 z-50 border-y border-primary-500 bg-background py-3 text-base uppercase">
       <Marquee autoFill speed={90}>
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-secondary-500 py-3 px-6 mx-4"
+            className="mx-4 border border-secondary-500 px-6 py-3"
           >
             <p>{item}</p>
           </div>
         ))}
-        <div className="border border-accent-500 py-3 px-6 mx-4 text-accent-500">
+        <div className="mx-4 border border-accent-500 px-6 py-3 text-accent-500">
           <h2>Open to job offers</h2>
         </div>
       </Marquee>
     </section>
   );
 };
-

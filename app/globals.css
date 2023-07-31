@@ -17,7 +17,26 @@ body,
 @layer components {
   .main-container {
     display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .hero-container {
+    display: grid;
     grid-template-columns: 16rem 1200px 16rem;
+  }
+
+  .running-line-shade {
+    position: sticky;
+  }
+
+  .running-line-shade::before {
+    content: "";
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+    width: 100%;
+    height: calc(4rem - 1px);
+    background-image: linear-gradient(theme("colors.background"), transparent);
   }
 
   .hero-section-cut {

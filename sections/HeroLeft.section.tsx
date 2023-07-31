@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const HeroLeftSection = () => {
   return (
-    <section className="relative flex flex-col justify-between pr-8 py-8">
+    <section className="relative flex select-none flex-col justify-between py-8 pr-8">
       <>
         {/* top horizontal */}
         <div className="absolute right-4 top-0 h-1 w-[242px] border-t border-accent-800" />
@@ -17,13 +17,13 @@ export const HeroLeftSection = () => {
         <div className="absolute bottom-4 right-0 h-[242px] w-4 border-r border-accent-800" />
         <div className="absolute bottom-4 right-0 h-6 w-4 border-r border-accent-500" />
         {/* top dot */}
-        <div className="absolute -top-[1px] -right-[1px] h-[3px] w-[3px] bg-accent-500"/>
+        <div className="absolute -right-[1px] -top-[1px] h-[3px] w-[3px] bg-accent-500" />
         {/* bottom dot */}
-        <div className="absolute -bottom-[1px] -right-[1px] h-[3px] w-[3px] bg-accent-500"/>
+        <div className="absolute -bottom-[1px] -right-[1px] h-[3px] w-[3px] bg-accent-500" />
       </>
       <div className="flex flex-col gap-20">
         <Image src="/assets/torus.svg" width={205} height={208} alt="torus" />
-        <Image src="/assets/torus.svg" width={205} height={208} alt="torus" />
+        <Image src="/assets/star.svg" width={205} height={208} alt="star" />
       </div>
       <div className="flex gap-4 pl-4">
         <div className="flex flex-col items-center">
@@ -33,17 +33,17 @@ export const HeroLeftSection = () => {
             height={10}
             alt="protocol"
           />
-          <p className="text-center text-xs uppercase text-primary-500 text-[10px]">
+          <p className="text-center text-[10px] text-xs uppercase text-primary-500">
             Protocol
           </p>
-          <p className="text-center text-xs uppercase text-primary-500 text-[10px] -mt-[4px]">
+          <p className="-mt-[4px] text-center text-[10px] text-xs uppercase text-primary-500">
             2023-msk
           </p>
         </div>
         <div className="flex flex-col">
-          <p className="uppercase text-[8px]">User identified</p>
-          <p className="uppercase text-[8px]">Breaching completed</p>
-          <p className="uppercase text-[8px]">Compiling daemon</p>
+          <p className="text-[8px] uppercase">User identified</p>
+          <p className="text-[8px] uppercase">Breaching completed</p>
+          <p className="text-[8px] uppercase">Compiling daemon</p>
         </div>
       </div>
     </section>

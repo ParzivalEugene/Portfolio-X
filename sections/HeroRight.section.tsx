@@ -1,9 +1,17 @@
 "use client";
+import { generateRandomString } from "@/tools";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const data = ["Designer", "ML enthusiast", "Fullstack developer"];
 
 export const HeroRightSection = () => {
+  const [randomString, setRandomString] = useState("");
+
+  useEffect(() => {
+    setRandomString(generateRandomString(92));
+  }, []);
+
   return (
     <section className="relative flex justify-between py-8 pl-8">
       <>
@@ -42,13 +50,14 @@ export const HeroRightSection = () => {
           alt="cyber_sign_2"
           width={92}
           height={92}
+          className="select-none"
         />
         <div className="flex">
           <p
             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
             className="text-[8px] text-secondary-700"
           >
-            kal4wsf524454fa24as8xfg34oi9aufio32jasf5426r2qiujh577&*&W5lkal4wsf524454fa24as8xfg34oi9aufio
+            {randomString}
           </p>
           <div className="flex flex-col justify-between uppercase text-primary-500">
             <p
@@ -67,6 +76,7 @@ export const HeroRightSection = () => {
           alt="cyber_sign_1"
           width={64}
           height={64}
+          className="select-none"
         />
       </div>
     </section>

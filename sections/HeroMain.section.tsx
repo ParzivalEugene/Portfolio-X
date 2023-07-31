@@ -1,4 +1,4 @@
-import { BoxWithCorners, Spinner } from "@/components";
+import { BoxWithCorners, HeroFaceASCII, Spinner } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { GrUbuntu } from "react-icons/gr";
@@ -6,7 +6,10 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export const HeroMainSection = () => {
   return (
-    <section className="p-8 relative">
+    <section className="relative p-8">
+      <div className="absolute right-0 top-1/2 h-full w-1/2 -translate-y-1/2 select-none">
+        <HeroFaceASCII />
+      </div>
       <>
         {/* top left */}
         <div className="absolute left-4 top-0 h-1 w-[242px] border-t border-accent-800" />
@@ -15,14 +18,14 @@ export const HeroMainSection = () => {
         <div className="absolute right-4 top-0 h-1 w-[242px] border-t border-accent-800" />
         <div className="absolute right-4 top-0 h-1 w-6 border-t border-accent-500" />
         {/* bottom left */}
-        <div className="absolute left-4 bottom-0 h-1 w-[242px] border-b border-accent-800" />
-        <div className="absolute left-4 bottom-0 h-1 w-6 border-b border-accent-500" />
+        <div className="absolute bottom-0 left-4 h-1 w-[242px] border-b border-accent-800" />
+        <div className="absolute bottom-0 left-4 h-1 w-6 border-b border-accent-500" />
         {/* bottom right */}
-        <div className="absolute right-4 bottom-0 h-1 w-[242px] border-b border-accent-800" />
-        <div className="absolute right-4 bottom-0 h-1 w-6 border-b border-accent-500" />
+        <div className="absolute bottom-0 right-4 h-1 w-[242px] border-b border-accent-800" />
+        <div className="absolute bottom-0 right-4 h-1 w-6 border-b border-accent-500" />
       </>
       <div className="flex items-stretch gap-5">
-        <div className="flex flex-col gap-5">
+        <div className="z-10 flex flex-col gap-5">
           <div className="flex flex-col items-stretch">
             <div className="flex justify-center border border-primary-500 px-6 py-3">
               <h1 className="text-4xl font-bold uppercase">Michkoff.com</h1>
@@ -46,6 +49,7 @@ export const HeroMainSection = () => {
               width={268}
               height={50}
               alt="barcode"
+              className="select-none"
             />
           </BoxWithCorners>
         </div>
@@ -58,8 +62,8 @@ export const HeroMainSection = () => {
               公开招聘
             </p>
           </div>
-          <div className="w-min">
-            <div className="flex justify-center border-x border-t border-primary-500 px-6 py-3">
+          <div className="z-10 w-min">
+            <div className="flex justify-center border-x border-t border-primary-500 bg-background px-6 py-3">
               <h3 className="text-2xl">微芯片与信</h3>
             </div>
             <div className="hero-section-cut px-6 py-3">
