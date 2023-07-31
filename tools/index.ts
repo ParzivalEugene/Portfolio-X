@@ -1,1 +1,1 @@
-export { generateRandomString } from "./generateRandomString.tool";
+export { generateRandomString } from "./generateRandomString";

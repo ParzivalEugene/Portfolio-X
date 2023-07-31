@@ -1,6 +1,7 @@
-import { LeftFrame, Navbar, RunningLine } from "@/components";
-import { HeroLeftSection, HeroMainSection } from "@/sections";
-import { HeroRightSection } from "@/sections/HeroRight.section";
+import { Navbar, RunningLine } from "@/components";
+import { LeftFrame, RightFrame } from "@/components/Frames";
+import { DevProjectsSection } from "@/sections/DevProjects/DevProjectsSection";
+import { HeroSection } from "@/sections/Hero";
 
 export default function Home() {
   return (
@@ -10,12 +11,10 @@ export default function Home() {
       <main className="main-container items-start">
         <LeftFrame />
         <div>
-          <div className="hero-container mx-auto mt-8 w-fit">
-            <HeroLeftSection />
-            <HeroMainSection />
-            <HeroRightSection />
-          </div>
+          <HeroSection />
+          <DevProjectsSection />
         </div>
+        <RightFrame />
       </main>
     </>
   );

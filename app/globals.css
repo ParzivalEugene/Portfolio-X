@@ -22,7 +22,7 @@ body,
 
   .hero-container {
     display: grid;
-    grid-template-columns: 16rem 1200px 16rem;
+    grid-template-columns: 16rem 1280px 16rem;
   }
 
   .running-line-shade {
@@ -78,6 +78,102 @@ body,
       calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
         calc(100% - var(--border-width)),
       calc(var(--border-width)) calc(100% - var(--border-width))
+    );
+  }
+
+  .dev-projects-banner {
+    background: url("/assets/perspective_tunnel_big.svg") no-repeat center
+      center;
+    background-size: cover;
+  }
+
+  .project-info-card {
+    --border-width: 1px;
+    --edge-size: 1rem;
+
+    position: relative;
+    border: 0;
+    isolation: isolate;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - var(--edge-size)),
+      calc(100% - var(--edge-size)) 100%,
+      0 100%
+    );
+    background-color: theme("colors.secondary.500");
+  }
+
+  .project-info-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.primary.500");
+    z-index: -2;
+  }
+
+  .project-info-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.secondary.500");
+    z-index: -1;
+    clip-path: polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width))
+        calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
+      calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+        calc(100% - var(--border-width)),
+      calc(var(--border-width)) calc(100% - var(--border-width))
+    );
+  }
+
+  .project-info-card-chip {
+    --border-width: 1px;
+    --edge-size: 3px;
+
+    position: absolute;
+    top: 0;
+    left: -12px;
+    background: theme("colors.secondary.500");
+    width: 10px;
+    height: 100%;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 calc(100% - 1rem),
+      var(--edge-size) calc(100% - 1rem - var(--edge-size)),
+      var(--edge-size) calc(1rem + var(--edge-size)),
+      0 1rem
+    );
+  }
+
+  .project-info-card-chip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.primary.500");
+    z-index: -2;
+  }
+
+  .project-info-card-chip::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.secondary.500");
+    z-index: -1;
+    clip-path: polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - 1rem),
+      calc(var(--border-width) + var(--edge-size)) calc(100% - 1rem - var(--edge-size)),
+      calc(var(--border-width) + var(--edge-size)) calc(1rem + var(--edge-size)),
+      var(--border-width) 1rem
     );
   }
 }
