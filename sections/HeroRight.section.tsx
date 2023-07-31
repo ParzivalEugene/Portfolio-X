@@ -26,22 +26,42 @@ export const HeroRightSection = () => {
       </>
       <div className="flex w-min flex-col justify-between gap-5">
         {data.map((item, key) => (
-          <div
-            key={key}
-            style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
-            className="border border-accent-500 px-3 py-6"
-          >
-            <h2 className="text-xl">{item}</h2>
+          <div key={key} className="border border-accent-500 px-3 py-6">
+            <h2
+              className="text-xl"
+              style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+            >
+              {item}
+            </h2>
           </div>
         ))}
       </div>
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col items-center justify-between">
         <Image
           src="/assets/cyber_sign_2.svg"
           alt="cyber_sign_2"
           width={92}
           height={92}
         />
+        <div className="flex">
+          <p
+            style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+            className="text-[8px] text-secondary-700"
+          >
+            kal4wsf524454fa24as8xfg34oi9aufio32jasf5426r2qiujh577&*&W5lkal4wsf524454fa24as8xfg34oi9aufio
+          </p>
+          <div className="flex flex-col justify-between uppercase text-primary-500">
+            <p
+              style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+              className="w-min"
+            >
+              serial number is not found
+            </p>
+            <p style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}>
+              access denied
+            </p>
+          </div>
+        </div>
         <Image
           src="/assets/cyber_sign_1.svg"
           alt="cyber_sign_1"
