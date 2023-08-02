@@ -1,3 +1,4 @@
+import { Torus } from "@/components/Animations";
 import Image from "next/image";
 
 export const HeroLeftSection = () => {
@@ -22,7 +23,7 @@ export const HeroLeftSection = () => {
         <div className="absolute -bottom-[1px] -right-[1px] h-[3px] w-[3px] bg-accent-500" />
       </>
       <div className="flex flex-col gap-20">
-        <Image src="/assets/torus.svg" width={205} height={208} alt="torus" />
+        <Torus />
         <Image src="/assets/star.svg" width={205} height={208} alt="star" />
       </div>
       <div className="flex gap-4 pl-4">

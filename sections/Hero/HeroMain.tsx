@@ -1,4 +1,5 @@
-import { BoxWithCorners, HeroFaceASCII, Spinner } from "@/components/common";
+import { HeroFaceASCII, Spinner } from "@/components/Animations";
+import { BoxWithCorners } from "@/components/common";
 import { hero as data } from "@/data/eng";
 import Image from "next/image";
 import Link from "next/link";

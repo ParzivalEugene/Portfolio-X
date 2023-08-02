@@ -1,3 +1,4 @@
+import { Vortex } from "@/components/Animations";
 import { AnalyzingSystemBox, ProjectInfo } from "@/components/DevProjects";
 import Image from "next/image";
 
@@ -7,7 +8,7 @@ const data = {
     "Fullstack application",
     "Next.js",
     "supabase",
-    "TailwindCSS",
+    "Tailwind",
     "Netlify",
   ],
 };
@@ -19,12 +20,7 @@ export const Musify = () => {
         <h2 className="text-4xl font-bold uppercase text-accent-500">Musify</h2>
         <div className="flex gap-5">
           <div className="flex h-full items-center justify-center border border-primary-500 p-8">
-            <Image
-              src="/assets/vortex.svg"
-              width={380}
-              height={275}
-              alt="vortex"
-            />
+            <Vortex />
           </div>
           <div className="flex flex-col items-start gap-5">
             <div className="flex flex-col items-center">

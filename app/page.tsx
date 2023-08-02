@@ -1,5 +1,6 @@
 import { LeftFrame, RightFrame } from "@/components/Frames";
-import { RunningLine, Navbar } from "@/components/global";
+import { Navbar, RunningLine } from "@/components/global";
+import { DesignProjectsSection } from "@/sections/DesignProjects";
 import { DevProjectsSection } from "@/sections/DevProjects";
 import { HeroSection } from "@/sections/Hero";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <div>
           <HeroSection />
           <DevProjectsSection />
+          <DesignProjectsSection />
         </div>
         <RightFrame />
       </main>

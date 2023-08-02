@@ -171,7 +171,8 @@ body,
       calc(100% - var(--border-width)) calc(100% - var(--border-width)),
       var(--border-width) calc(100% - var(--border-width)),
       var(--border-width) calc(100% - 1rem),
-      calc(var(--border-width) + var(--edge-size)) calc(100% - 1rem - var(--edge-size)),
+      calc(var(--border-width) + var(--edge-size))
+        calc(100% - 1rem - var(--edge-size)),
       calc(var(--border-width) + var(--edge-size)) calc(1rem + var(--edge-size)),
       var(--border-width) 1rem
     );
@@ -179,5 +180,50 @@ body,
 
   .stack-card {
     left: calc(100% + 20px);
+  }
+
+  .design-card {
+    --border-width: 1px;
+    --edge-size: 8px;
+    --slide-width: 1rem;
+    --slide-height: 4px;
+
+    clip-path: polygon(
+      0 var(--slide-height),
+      var(--slide-width) var(--slide-height),
+      calc(var(--slide-width) + var(--slide-height)) 0,
+      100% 0,
+      100% 100%,
+      var(--edge-size) 100%,
+      0 calc(100% - var(--edge-size))
+    );
+  }
+
+  .design-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.primary.500");
+    z-index: -2;
+  }
+
+  .design-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.secondary.500");
+    z-index: -1;
+    clip-path: polygon(
+      var(--border-width) calc(var(--border-width) + var(--slide-height)),
+      calc(var(--border-width) + var(--slide-width))
+        calc(var(--border-width) + var(--slide-height)),
+      calc(var(--border-width) + var(--slide-width) + var(--slide-height)) var(
+          --border-width
+        ),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      calc(var(--edge-size) + var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--edge-size))
+    );
   }
 }

@@ -1,5 +1,6 @@
 import { Discopus } from "./Discopus";
 import { Musify } from "./Musify";
+import { OldPortfolio } from "./OldPortfolio";
 
 export const DevProjectsSection = () => {
   return (
@@ -13,6 +14,7 @@ export const DevProjectsSection = () => {
       </div>
       <Musify />
       <Discopus />
+      <OldPortfolio />
     </section>
   );
 };
