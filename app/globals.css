@@ -176,4 +176,8 @@ body,
       var(--border-width) 1rem
     );
   }
+
+  .stack-card {
+    left: calc(100% + 20px);
+  }
 }

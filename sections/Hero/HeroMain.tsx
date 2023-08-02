@@ -1,4 +1,5 @@
-import { BoxWithCorners, HeroFaceASCII, Spinner } from "@/components";
+import { BoxWithCorners, HeroFaceASCII, Spinner } from "@/components/common";
+import { hero as data } from "@/data/eng";
 import Image from "next/image";
 import Link from "next/link";
 import { GrUbuntu } from "react-icons/gr";
@@ -35,7 +36,7 @@ export const HeroMainSection = () => {
             </div>
             <Link href="https://links.michkoff.com">
               <div className="flex justify-center border border-primary-500 bg-secondary-500 px-6 py-3 transition-colors hover:bg-secondary-700">
-                <p className="text-2xl uppercase">Visit links 浏览连结</p>
+                <p className="text-2xl uppercase">{data.visitLinks} 浏览连结</p>
               </div>
             </Link>
           </div>
@@ -43,7 +44,7 @@ export const HeroMainSection = () => {
             className="flex flex-col items-center gap-2 px-6 py-3"
             intent={"withBorder"}
           >
-            <p className="text-2xl uppercase">Citizen Detected</p>
+            <p className="text-2xl uppercase">{data.citizenDetected}</p>
             <Image
               src="/assets/barcode.svg"
               width={268}
@@ -68,23 +69,22 @@ export const HeroMainSection = () => {
             </div>
             <div className="hero-section-cut px-6 py-3">
               <h2 className="mb-3 w-max text-2xl font-medium text-accent-500">
-                Eugene Michkov
+                {data.infoCard.name}
               </h2>
               <div className="flex flex-col gap-1 ">
                 <div className="flex items-center gap-2">
                   <HiOutlineLocationMarker className="text-text" />
-                  <p className="font-medium">Moscow/Russia</p>
+                  <p className="font-medium">{data.infoCard.location}</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <GrUbuntu className="text-text" />
-                  <p className="font-medium">Level 18</p>
+                  <p className="font-medium">{data.infoCard.age}</p>
                 </div>
               </div>
-              <p className="my-6 text-xs">
-                Working in discopus as backend developer. Cooks delicious.
-                Enjoys neo-futurism. Have a cat named Usurper.
+              <p className="my-6 text-xs">{data.infoCard.description}</p>
+              <p className="uppercase text-primary-500">
+                {data.infoCard.dataIsMissing}
               </p>
-              <p className="uppercase text-primary-500">DATA is missing...</p>
             </div>
           </div>
         </div>

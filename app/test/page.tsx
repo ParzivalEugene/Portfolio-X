@@ -1,0 +1,97 @@
+"use client";
+import { TypeAnimation } from "react-type-animation";
+
+
+const page = () => {
+  return (
+    <TypeAnimation
+      sequence={[
+        "Connecting to server",
+        100,
+        "Connecting to server.",
+        100,
+        "Connecting to server..",
+        100,
+        "Connecting to server...",
+        100,
+        "Connecting to server",
+        100,
+        "Connecting to server.",
+        100,
+        "Connecting to server..",
+        100,
+        "Connecting to server...",
+        100,
+        "Connecting to server",
+        100,
+        "Connecting to server.",
+        100,
+        "Connecting to server..",
+        100,
+        "Connecting to server...",
+        10,
+        "Connected to server",
+        100,
+        "Connected to server\nConnection established",
+        100,
+        "Connected to server\nConnection established\nBreaching",
+        100,
+        "Connected to server\nConnection established\nBreaching.",
+        100,
+        "Connected to server\nConnection established\nBreaching..",
+        100,
+        "Connected to server\nConnection established\nBreaching...",
+        100,
+        "Connected to server\nConnection established\nBreaching",
+        100,
+        "Connected to server\nConnection established\nBreaching.",
+        100,
+        "Connected to server\nConnection established\nBreaching..",
+        100,
+        "Connected to server\nConnection established\nBreaching...",
+        100,
+        "Connected to server\nConnection established\nBreaching",
+        100,
+        "Connected to server\nConnection established\nBreaching.",
+        100,
+        "Connected to server\nConnection established\nBreaching..",
+        100,
+        "Connected to server\nConnection established\nBreaching...",
+        10,
+        "Connected to server\nConnection established\nSuccessfully breached",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information.",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information..",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information...",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information.",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information..",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information...",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information.",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information..",
+        100,
+        "Connected to server\nConnection established\nSuccessfully breached\nGetting Information...",
+        10,
+        "Connected to server\nConnection established\nSuccessfully breached\nInformation received",
+      ]}
+      style={{ whiteSpace: "pre-line" }}
+      className="line-he text-[10px]"
+      speed={90}
+      cursor={false}
+    />
+  );
+};
+
+export default page;

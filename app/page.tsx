@@ -1,6 +1,6 @@
-import { Navbar, RunningLine } from "@/components";
 import { LeftFrame, RightFrame } from "@/components/Frames";
-import { DevProjectsSection } from "@/sections/DevProjects/DevProjectsSection";
+import { RunningLine, Navbar } from "@/components/global";
+import { DevProjectsSection } from "@/sections/DevProjects";
 import { HeroSection } from "@/sections/Hero";
 
 export default function Home() {

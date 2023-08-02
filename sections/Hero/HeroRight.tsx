@@ -1,9 +1,8 @@
 "use client";
+import { hero as data } from "@/data/eng";
 import { generateRandomString } from "@/tools";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-const data = ["Designer", "ML enthusiast", "Fullstack developer"];
 
 export const HeroRightSection = () => {
   const [randomString, setRandomString] = useState("");
@@ -33,7 +32,7 @@ export const HeroRightSection = () => {
         <div className="absolute -bottom-[1px] -left-[1px] h-[3px] w-[3px] bg-accent-500" />
       </>
       <div className="flex w-min flex-col justify-between gap-5">
-        {data.map((item, key) => (
+        {data.tags.map((item, key) => (
           <div key={key} className="border border-accent-500 px-3 py-6">
             <h2
               className="text-xl"

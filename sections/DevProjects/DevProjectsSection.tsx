@@ -1,3 +1,4 @@
+import { Discopus } from "./Discopus";
 import { Musify } from "./Musify";
 
 export const DevProjectsSection = () => {
@@ -11,6 +12,7 @@ export const DevProjectsSection = () => {
         </div>
       </div>
       <Musify />
+      <Discopus />
     </section>
   );
 };
