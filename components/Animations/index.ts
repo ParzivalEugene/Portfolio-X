@@ -4,6 +4,8 @@ export { DiscopusPortal } from "./DiscopusPortal";
 export { GravitationalDistortion } from "./GravitationalDistortion";
 export { HeroFaceASCII } from "./HeroFaceASCII";
 export { IceWall } from "./IceWall";
+export { Matrix } from "./Matrix";
 export { Spinner } from "./Spinner";
+export { Star } from "./Star";
 export { Torus } from "./Torus";
 export { Vortex } from "./Vortex";

@@ -46,7 +46,7 @@ export const OldPortfolio = () => {
                 width="61"
                 height="61"
                 stroke="#EF3939"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <defs>
                 <clipPath id="clip0_133_3143">
