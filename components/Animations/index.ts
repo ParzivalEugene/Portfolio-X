@@ -1,3 +1,4 @@
+export { AnalyzingSystemBox } from "./AnalyzingSystemBox";
 export { Atom } from "./Atom";
 export { Cubes } from "./Cubes";
 export { DiscopusPortal } from "./DiscopusPortal";

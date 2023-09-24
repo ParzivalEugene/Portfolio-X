@@ -35,50 +35,40 @@ export const Star = () => {
     canvas.width = 208;
     canvas.height = 208;
 
-    const image = new Image();
-    image.src = `data:image/svg+xml;base64,${btoa(svg)}`;
-
+    const images: HTMLImageElement[] = [];
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
     const startAngle = 0;
     const endAngle = 2 * Math.PI;
-    let currentAngle = 0;
-    const animationDuration = 2000; // Продолжительность анимации в миллисекундах
+    const animationDuration = 2000;
+    const totalFrames = 8;
+    const frameDuration = animationDuration / totalFrames;
+    let currentFrame = 0;
     let startTime = 0;
 
-    // Функция анимации
     function animate(currentTime: number) {
-      // Определяем прошедшее время с начала анимации
       if (!startTime) {
         startTime = currentTime;
       }
       const elapsedTime = currentTime - startTime;
 
-      // Рассчитываем текущий угол вращения
-      currentAngle = easeInOut(
-        elapsedTime,
-        startAngle,
-        endAngle - startAngle,
-        animationDuration
+      currentFrame = Math.floor(
+        (elapsedTime / frameDuration) % totalFrames
       );
 
-      // Очищаем canvas
       context.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Рисуем картинку с учетом угла вращения
       context.save();
       context.translate(centerX, centerY);
-      context.rotate(currentAngle);
-      context.drawImage(image, -image.width / 2, -image.height / 2);
+      context.rotate((currentFrame * 2 * Math.PI) / totalFrames);
+      context.drawImage(images[currentFrame], -images[currentFrame].width / 2, -images[currentFrame].height / 2);
       context.restore();
 
-      // Проверяем, достигнут ли конец анимации
       if (elapsedTime < animationDuration) {
         requestAnimationFrame(animate);
       }
     }
 
-    // Функция ease in out
     function easeInOut(t: number, b: number, c: number, d: number) {
       t /= d / 2;
       if (t < 1) return (c / 2) * t * t + b;
@@ -86,10 +76,17 @@ export const Star = () => {
       return (-c / 2) * (t * (t - 2) - 1) + b;
     }
 
-    // Запускаем анимацию при загрузке картинки
-    image.onload = function () {
+    Promise.all(Array.from({ length: totalFrames }, (_, i) => {
+      return new Promise<HTMLImageElement>((resolve, reject) => {
+        const image = new Image();
+        image.onload = () => resolve(image);
+        image.onerror = reject;
+        image.src = `data:image/svg+xml;base64,${btoa(svg)}`;
+      });
+    })).then((loadedImages) => {
+      images.push(...loadedImages);
       requestAnimationFrame(animate);
-    };
+    });
   }, []);
 
   return <canvas ref={ref} />;

@@ -1,5 +1,5 @@
-import { Vortex } from "@/components/Animations";
-import { AnalyzingSystemBox, ProjectInfo } from "@/components/DevProjects";
+import { AnalyzingSystemBox, Vortex } from "@/components/Animations";
+import { ProjectInfo } from "@/components/DevProjects";
 import Image from "next/image";
 
 const data = {

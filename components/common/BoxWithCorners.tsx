@@ -4,6 +4,7 @@ const boxWithCorners = cva("relative", {
   variants: {
     intent: {
       withBorder: "border border-secondary-500 box-border",
+      
     },
   },
 });
