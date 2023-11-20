@@ -1,6 +1,6 @@
 "use client";
 
-import { runningLine as data } from "@/data/eng";
+import { runningLine as data } from "data/eng";
 import Marquee from "react-fast-marquee";
 
 export const RunningLine = () => {

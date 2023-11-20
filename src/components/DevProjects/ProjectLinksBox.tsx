@@ -1,8 +1,8 @@
 "use client";
+import { BoxWithCorners } from "@/components/common";
 import { generateRandomString } from "@/tools";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
-import { BoxWithCorners } from "@/components/common";
 
 interface SectionProps {
   children: React.ReactNode;

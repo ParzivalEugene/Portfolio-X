@@ -1,7 +1,6 @@
-"use client";
-import { Lenis } from "@studio-freight/react-lenis";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Smooth from "./smooth";
 
 const grotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -24,9 +23,9 @@ export default function RootLayout({
         <title>{metadata.title}</title>
       </head>
       <body className={grotesk.className}>
-        <Lenis root>
+        <Smooth>
           {children}
-        </Lenis>
+        </Smooth>
       </body>
     </html>
   );

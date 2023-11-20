@@ -1,35 +1,8 @@
 "use client";
-
 import { BoxWithCorners } from "@/components/common";
-import { useEffect, useRef } from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 export const AnalyzingSystemBox = () => {
-  const ref = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = ref.current;
-    const ctx = canvas?.getContext("2d");
-    if (!ctx || !canvas) return;
-
-    const gap = 4;
-    const width = 16;
-    const amount = 14;
-
-    ctx.fillStyle = "#EF3939";
-    for (let i = 0; i <= amount; i++) {
-      ctx.fillRect(i * (width + gap), 36, width, 2);
-    }
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, 32);
-      
-      
-      requestAnimationFrame(draw);
-    }
-
-    draw()
-  }, []);
-
   return (
     <BoxWithCorners
       intent={"withBorder"}
@@ -41,7 +14,7 @@ export const AnalyzingSystemBox = () => {
       </div>
       <div className="flex flex-col items-center gap-2 self-center px-8">
         <p className="text-2xl uppercase">Analyzing system</p>
-        <canvas ref={ref} width={276} height={38} />
+        <Player src={"/lotties/analyzing.json"} autoplay loop />
       </div>
       <div className="flex justify-between text-[8px] uppercase text-secondary-700">
         <p>sysver ax36v</p>

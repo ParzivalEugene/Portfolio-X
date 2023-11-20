@@ -1,5 +1,4 @@
-import { Cubes } from "@/components/Animations";
-import { DiscopusPortal } from "@/components/Animations";
+import { Cubes, DiscopusPortal } from "@/components/Animations";
 import { ProjectInfo } from "@/components/DevProjects";
 
 const data = {

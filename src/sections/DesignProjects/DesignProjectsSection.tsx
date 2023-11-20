@@ -12,7 +12,7 @@ export const DesignProjectsSection = () => {
       </div>
       <div className="mt-8 flex justify-between">
         <div className="flex w-min flex-col gap-8">
-          <h2 className="w-max border border-primary-500 px-6 py-3 text-5xl font-medium uppercase text-primary-500">
+          <h2 className="w-max border border-text px-6 py-3 text-5xl font-medium uppercase text-text">
             Design Projects
           </h2>
           <p className="text-primary-500">

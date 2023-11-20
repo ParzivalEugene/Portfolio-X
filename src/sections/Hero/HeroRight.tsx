@@ -1,5 +1,5 @@
 "use client";
-import { hero as data } from "@/data/eng";
+import { hero as data } from "data/eng";
 import { generateRandomString } from "@/tools";
 import Image from "next/image";
 import { useEffect, useState } from "react";

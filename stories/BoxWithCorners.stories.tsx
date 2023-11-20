@@ -1,5 +1,5 @@
-import { BoxWithCorners } from "../components/common";
 import type { Meta, StoryObj } from "@storybook/react";
+import { BoxWithCorners } from "../src/components/common";
 
 const meta: Meta<typeof BoxWithCorners> = {
   component: BoxWithCorners,

@@ -1,4 +1,4 @@
-import { Torus } from "@/components/Animations";
+import { Star, Torus } from "@/components/Animations";
 import Image from "next/image";
 
 export const HeroLeftSection = () => {
@@ -24,7 +24,7 @@ export const HeroLeftSection = () => {
       </>
       <div className="flex flex-col gap-20">
         <Torus />
-        <Image src="/assets/star.svg" width={205} height={208} alt="star" />
+        <Star />
       </div>
       <div className="flex gap-4 pl-4">
         <div className="flex flex-col items-center">
@@ -38,7 +38,7 @@ export const HeroLeftSection = () => {
             Protocol
           </p>
           <p className="-mt-[4px] text-center text-[10px] text-xs uppercase text-primary-500">
-            2023-msk
+            2024-msk
           </p>
         </div>
         <div className="flex flex-col">
