@@ -6,11 +6,11 @@ export const RightFrame = () => {
   const [randomString, setRandomString] = useState("");
 
   useEffect(() => {
-    setRandomString(generateRandomString(160));
+    setRandomString(generateRandomString(120));
   }, []);
 
   return (
-    <div className="sticky top-14 flex flex-row-reverse items-center pr-1 uppercase">
+    <div className="sticky top-1/2 -translate-y-1/2 flex flex-row-reverse items-center pr-1 uppercase">
       <p
         style={{ writingMode: "vertical-lr" }}
         className="text-xs text-primary-500"

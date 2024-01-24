@@ -41,10 +41,10 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   return (
     <div className="flex flex-row">
       <div className="design-card relative flex w-[28px] flex-col items-center justify-between bg-secondary-500 pb-2 pt-3 text-xs uppercase text-primary-500">
-        <p style={{ writingMode: "sideways-lr", textOrientation: "sideways" }}>
+        <p style={{ writingMode: "vertical-lr", rotate: "180deg" }}>
           shard v2.0
         </p>
-        <p style={{ writingMode: "sideways-lr" }}>
+        <p style={{ writingMode: "vertical-lr", rotate: "180deg" }}>
           project identifier {projectId}
         </p>
       </div>

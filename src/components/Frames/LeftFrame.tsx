@@ -6,19 +6,19 @@ export const LeftFrame = () => {
   const [randomString, setRandomString] = useState("");
 
   useEffect(() => {
-    setRandomString(generateRandomString(160));
+    setRandomString(generateRandomString(120));
   }, []);
 
   return (
-    <div className="flex items-center uppercase pl-1 sticky top-14">
+    <div className="flex items-center uppercase pl-1 sticky top-1/2 -translate-y-1/2">
       <p
-        style={{ writingMode: "sideways-lr" }}
+        style={{ writingMode: "vertical-lr", transform: "rotate(180deg)" }}
         className="text-xs text-primary-500"
       >
         alpha version development in progress
       </p>
       <p
-        style={{ writingMode: "sideways-lr", textOrientation: "mixed" }}
+        style={{ writingMode: "vertical-lr", transform: "rotate(180deg)" }}
         className="text-[8px] text-secondary-700"
       >
         {randomString}
